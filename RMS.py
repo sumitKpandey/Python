@@ -4,26 +4,22 @@ def findProduct(inputGrid, length):
     for i in range(length):
         for j in range(length-3):
             prod = inputGrid[i][j]*inputGrid[i][j+1]*inputGrid[i][j+2]
-            print(prod)
             ctr += 1
             if prod > max_prod:
                 max_prod = prod
             prod = inputGrid[j][i]*inputGrid[j+1][i]*inputGrid[j+2][i]
-            print(prod)
             ctr += 1
             if prod > max_prod:
                 max_prod = prod
     for i in range(length-3):
         for j in range(length-3):
             prod = inputGrid[i][j]*inputGrid[i+1][j+1]*inputGrid[i+2][j+2]
-            print(prod)
             ctr += 1
             if prod > max_prod:
                 max_prod = prod
     for i in range(2, length):
         for j in range(length-3):
             prod = inputGrid[i][j]*inputGrid[i-1][j+1]*inputGrid[i-2][j+2]
-            print(prod)
             ctr += 1
             if prod > max_prod:
                 max_prod = prod
