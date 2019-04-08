@@ -7,6 +7,8 @@ def findProduct(inputGrid, length):
             k = str(i)+str(j)+str(i)+str(j+1)+str(i)+str(j+2)
             if k not in numberOfCombination:
                 numberOfCombination.append(k)
+            if prod > max_prod:
+                max_prod = prod
             prod = inputGrid[j][i]*inputGrid[j+1][i]*inputGrid[j+2][i]
             k = str(j)+str(i)+str(j+1)+str(i)+str(j+2)+str(i)
             if k not in numberOfCombination:
