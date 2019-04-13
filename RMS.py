@@ -2,7 +2,7 @@ def findProduct(inputGrid, length):
     max_prod = 0
     ctr = 0
     for i in range(length):
-        for j in range(length-3):
+        for j in range(length - 2):
             prod = inputGrid[i][j]*inputGrid[i][j+1]*inputGrid[i][j+2]
             ctr += 1
             if prod > max_prod:
@@ -11,15 +11,13 @@ def findProduct(inputGrid, length):
             ctr += 1
             if prod > max_prod:
                 max_prod = prod
-    for i in range(length-3):
-        for j in range(length-3):
+    for i in range(length - 2):
+        for j in range(length - 2):
             prod = inputGrid[i][j]*inputGrid[i+1][j+1]*inputGrid[i+2][j+2]
             ctr += 1
             if prod > max_prod:
                 max_prod = prod
-    for i in range(2, length):
-        for j in range(length-3):
-            prod = inputGrid[i][j]*inputGrid[i-1][j+1]*inputGrid[i-2][j+2]
+            prod = inputGrid[i][j+2]*inputGrid[i+1][j+1]*inputGrid[i+2][j]
             ctr += 1
             if prod > max_prod:
                 max_prod = prod
